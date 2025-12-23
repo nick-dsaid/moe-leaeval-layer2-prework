@@ -1,0 +1,50 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "custom_detector"
+version = "0.0.1"
+description = "A short description of the project."
+authors = [
+  { name = "nick_tan" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+dependencies = [
+    "mkdocs",
+    "openai>=2.14.0",
+    "pandera>=0.27.1",
+    "pip",
+    "polars>=1.36.1",
+    "pytest",
+    "python-dotenv",
+    "ruff",
+]
+requires-python = "~=3.12.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["custom_detector"]
+include = ["pyproject.toml", "custom_detector/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["custom_detector"]
+force-sort-within-sections = true
+
+[dependency-groups]
+dev = [
+    "jupytext>=1.18.1",
+    "nbdev>=2.4.7",
+    "nbdime>=4.0.2",
+    "pygwalker>=0.4.9.15",
+]
+
