@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "moe-leaeval-layer2-prework"
+  site-url: "https://nick-dsaid.github.io/moe-leaeval-layer2-prework"
+  description: "A user-customizable adversarial prompts detector"
+  repo-branch: main
+  repo-url: "https://github.com/nick-dsaid/moe-leaeval-layer2-prework"
